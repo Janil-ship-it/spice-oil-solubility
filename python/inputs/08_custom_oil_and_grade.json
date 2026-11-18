@@ -1,0 +1,9 @@
+{
+  "_comment": "Optional oil composition (here a high-oleic sunflower oil) and grade; unrefined sunflower oil smokes at about 107 C, so the 160 C point is flagged.",
+  "solute": "piperine",
+  "oil": "sunflower",
+  "oil_grade": "unrefined",
+  "oil_composition": {"C16:0": 4.0, "C18:0": 4.0, "C18:1": 82.0, "C18:2": 10.0},
+  "T_C": [60, 160],
+  "loading_mg_per_100g": 333
+}

@@ -1,0 +1,10 @@
+{
+  "_comment": "Route R4 template. Fill value (partial pressure of the solute above your oil sample, Pa), x_solution (mole fraction of solute in that sample) and p_sub_Pa (sublimation pressure of the pure solid at the same T). Henry's law then gives x_sat = x_solution * p_sub / p. Left empty on purpose: running it shows the input check.",
+  "solute": "vanillin",
+  "oil": "sunflower",
+  "T_C": [40, 60],
+  "measurements": [
+    {"kind": "headspace", "value": null, "unit": "Pa", "T_C": 40,
+     "x_solution": null, "p_sub_Pa": null}
+  ]
+}

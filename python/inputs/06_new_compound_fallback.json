@@ -1,0 +1,6 @@
+{
+  "_comment": "A compound picked from SpiceRx/FlavorDB (thymol, ajwain) with Tm, M and groups but NO enthalpy of fusion -> Walden's-rule fallback, with a wider uncertainty.",
+  "solute": "thymol",
+  "oil": "coconut",
+  "T_C": [30, 45]
+}

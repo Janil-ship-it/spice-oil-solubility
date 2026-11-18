@@ -1,0 +1,9 @@
+# model
+numpy>=1.24
+scipy>=1.10
+# web API
+fastapi>=0.110
+uvicorn[standard]>=0.29
+# optional: figures (run_all.py) and tests
+matplotlib>=3.7
+pytest>=7

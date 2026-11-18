@@ -1,0 +1,6 @@
+{
+  "_comment": "Mandatory inputs only -> route R5 (pure UNIFAC). Everything else uses defaults.",
+  "solute": "curcumin",
+  "oil": "sunflower",
+  "T_C": [25, 60, 100, 140, 160]
+}

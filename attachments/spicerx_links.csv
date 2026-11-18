@@ -1,0 +1,5 @@
+compound,pubchem_cid,spicerx_mesh_id,spicerx_formula,spicerx_molecular_weight,spices_in_spicerx,data_quality_note
+curcumin,969516,D003474,C20H18O5,,Turmeric; Zedoary; Curry Leaf,formula consistent with PubChem
+piperine,638024,C008922,C20H16O6,352.337,Black Pepper; Long Pepper,"SpiceRx formula and molecular weight do NOT match its own InChI (C17H19NO3, 285.34 g/mol); identity fields correct"
+thymol,6989,D013943,C6H14S2,150.305,Star Anise; Ceylon Cinnamon; Black Pepper; Wild Thyme; Clove; Caraway; Garden Thyme; Nutmeg; Cumin; Ajowan; Black Cumin; Bay Laurel; Ginger,"SpiceRx formula does NOT match its own InChI (C10H14O, 150.22 g/mol); identity fields correct"
+vanillin,1183,,,,,not found in SpiceRx (searched by PubChem ID and by name)

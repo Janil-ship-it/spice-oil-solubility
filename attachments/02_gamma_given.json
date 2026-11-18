@@ -1,0 +1,9 @@
+{
+  "_comment": "Optional activity coefficient supplied -> route R1: the UNIFAC step is skipped. gamma_T_C is the temperature at which gamma is known; other temperatures use Gibbs-Helmholtz.",
+  "solute": "piperine",
+  "oil": "coconut",
+  "T_C": [40, 60, 100],
+  "gamma": 2.8,
+  "gamma_T_C": 60,
+  "uncertainties": {"ln_gamma_model": 0.1, "T": 2.0}
+}

@@ -1,0 +1,42 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Spice in hot oil — solubility",
+      "hasCanvas": false,
+      "bodyTextLen": 1052,
+      "bodyTextHash": "4d18aa4d823593585e108d0db1904f7ad6974ee71815431d2418fe5012270fcb",
+      "bodyTextPrefix": "CL 202 · GROUP 4A · IIT GANDHINAGAR How much spice can hot oil h",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Spice in hot oil — solubility",
+      "hasCanvas": false,
+      "bodyTextLen": 1006,
+      "bodyTextHash": "77ef56fe75bb260b0a7ed209eb10690d2191315416daafbb31277fb2fa14b069",
+      "bodyTextPrefix": "CL 202 · GROUP 4A · IIT GANDHINAGAR How much spice can hot oil h",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text changed (925 -> 1052 chars, hash mismatch)"
+  ]
+}
