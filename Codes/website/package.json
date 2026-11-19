@@ -1,0 +1,31 @@
+{
+  "name": "group4a-spice-oil-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Spice compounds in hot oil: solubility and saturation checker (CL 202, Group 4A)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 8080",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 8080",
+    "api": "cd ../python && python -m uvicorn api:app --host 127.0.0.1 --port 8000",
+    "test": "tsx tests/engine-vs-python.test.ts"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "recharts": "2.15.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.11",
+    "@types/node": "22.16.5",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "4.7.0",
+    "tailwindcss": "4.1.11",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vite-plugin-singlefile": "2.3.0"
+  }
+}

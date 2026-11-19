@@ -1,60 +1,65 @@
-# Spice–Oil Solubility (Group 4A)
+# Spice Compounds in Hot Oil: Solubility and Saturation Point (Group 4A)
 
-**Authors:** Rohan Jaybhave, Janil Jain, Preet Patel, Manish Kumawat, Saksham Malav  
-**Topic:** Flavor Extraction – Solubility of curcumin, vanillin and piperine in cooking oils  
-**Deadline:** 19 November 2026, 11:59 PM
+CL 202 Chemical Engineering Thermodynamics, IIT Gandhinagar, Project 4 (Flavour extraction).
 
-## Submission layout (matches course guidelines)
+**Authors:** Rohan Jaybhave, Janil Jain, Preet Patel, Saksham Malav, Manish Kumawat
+
+We predict how much curcumin (turmeric), vanillin (vanilla) and piperine (black pepper) can
+dissolve in sunflower and coconut oil from 25 to 200 °C, alone and in mixtures, using
+solid-liquid equilibrium with UNIFAC activity coefficients. For every case the code and the
+website state whether **saturation is achieved at the chosen temperature, so that more mixing
+cannot be done**, how much stays undissolved, and the temperature above which everything dissolves.
+
+## Submission folder layout
 
 ```
-├── Codes/                 ← complete code package + README
-│   ├── flavorsol/         # Python package
-│   ├── data/              # FlavorDB2 / SpiceRx CSVs, lab template
-│   ├── inputs/            # example JSON routes
-│   ├── results/           # generated tables
-│   ├── demo_m3.py
-│   ├── run_all.py
-│   ├── requirements.txt
-│   ├── README.md
-│   └── GAPS_AND_AUDIT.md
-├── Data/                  ← input & output data (CSV / TXT)
-├── Literature/            ← place PDF copies of all references here
-├── manuscript/            ← LaTeX source of the final manuscript
-│   └── main.tex
-├── docs/website/          ← static checker page
-└── README.md              ← this file
+.
+├── Group4A_Manuscript.pdf     final manuscript (JCED / ACS format)
+├── Group4A_Manuscript.tex     editable LaTeX source (pdflatex, achemso class)
+├── Group4A_Manuscript.docx    editable Word version
+├── manuscript_figures/        figures used by the manuscript (PDF for LaTeX, PNG for Word)
+├── Presentations/             project slides
+├── Codes/                     complete code package + README (Python model, website, notebook)
+├── Data/                      input and output data of every scenario (CSV / TXT) + README
+├── Literature/                reference PDFs + README (list with DOIs)
+├── LICENSE
+└── README.md                  this file
 ```
 
-Upload:
-- `Codes/` → shared folder **Codes**
-- `Data/` → shared folder **Data**
-- `Literature/` → shared folder **Literature**
-- `manuscript/` (PDF + editable source) and this README → **main project folder**
+Upload `Codes/`, `Data/` and `Literature/` to the shared subfolders of the same names; the
+manuscript files (PDF, TEX, DOCX, manuscript_figures) and this README go to the main folder.
 
-## Quick start
+## Website
+
+Open **`Codes/website/dist/index.html`** in any browser (single file, works offline).
+Tabs: Single compound, Mixtures, Methodology, Full report.
+Online copy (after merging into main):
+https://htmlpreview.github.io/?https://github.com/Janil-ship-it/spice-oil-solubility/blob/main/Codes/website/dist/index.html
+
+## Quick start (Python)
 
 ```bash
-cd Codes
+cd Codes/python
 pip install -r requirements.txt
-python demo_m3.py
-python -m flavorsol database          # IIIT-Delhi FlavorDB2 / SpiceRx status
-python -m flavorsol solubility curcumin coconut --T 25 100 150
-python -m flavorsol batch --oil coconut --T 60 --oil-g 15 --curcumin 0.047 --piperine 0.05
-python -m flavorsol validate
-python run_all.py                     # regenerates all results/
+python -m flavorsol saturation curcumin coconut --T 60 --oil-g 15 --added-g 0.047
+python -m flavorsol mixsat --oil coconut --T 60 --curcumin 0.047 --piperine 0.05 --vanillin 0.015
+python -m pytest -q          # 37 tests
+python run_all.py            # all results, figures and the Data folder
 ```
 
-## IIIT-Delhi data
+## Key results
 
-FlavorDB2 and SpiceRx (Complex Systems Lab, Prof. Ganesh Bagler, **IIIT-Delhi**) supply molecule identity and flavour profiles. They do **not** supply melting points or oil solubilities. See `Codes/GAPS_AND_AUDIT.md` and `python -m flavorsol database`.
+| | sunflower oil | coconut oil |
+|---|---|---|
+| Curcumin solubility at 25 / 100 / 180 °C (mg per 100 g) | 3.3 / 97 / 1430 | 8.8 / 186 / 2450 |
+| Tadka (47 mg curcumin in 15 g oil): saturated below | 132.8 °C | 115.2 °C |
+| Tadka (50 mg piperine in 15 g oil): saturated below | 30.7 °C | 32.8 °C |
+| Tadka vanillin (15 mg in 15 g oil) | never saturated | never saturated |
+| Whole tadka recipe (V + C + P together) dissolves above | 131.6 °C | 114.1 °C |
 
-## Manuscript
+Validation: the UNIFAC code reproduces the DDBST reference to 6e-11; published oil
+solubilities are matched within a factor of 2.2 on average (ideal solution: factor of about 20).
+Every prediction satisfies γ ≥ 1, x ≤ x_ideal and a solubility that rises with temperature.
 
-Compile with any recent LaTeX distribution:
-
-```bash
-cd manuscript
-pdflatex main.tex
-```
-
-Authors are already set to: Rohan Jaybhave, Janil Jain, Preet Patel, Manish Kumawat, Saksham Malav.
+See `Codes/README.md` for the code, `Data/README.txt` for the data files and the Methodology
+tab of the website for the method.

@@ -1,0 +1,1404 @@
+{
+ "mixture": [
+  {
+   "oil": "sunflower",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    425.56817183141703,
+    3.7116049300835647,
+    255.1188577133479
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    419.9128082259302,
+    3.6427022822520483
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 25,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    3.376449862883959,
+    245.00158015848302
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 40,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    732.2353735680638,
+    8.703786040035373,
+    576.6278760912729
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 40,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    710.777223840661,
+    8.341115393177427
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 40,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    7.4549077517431135,
+    539.0930147583373
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    1515.5510448828156,
+    27.472872493710096,
+    1617.1298066862648
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    1395.4070359510654,
+    24.33725865113601
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    20.372493713271783,
+    1415.4669758285
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 75,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    2770.732396753947,
+    71.67996819071209,
+    3542.2293047186995
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 75,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    2308.44050859911,
+    54.57092954410884
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 75,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    42.8245911926193,
+    2800.4238057495727
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000003,
+    3.4532419562264223,
+    247.3671831309076
+   ],
+   "saturated": [
+    false,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 25,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    3.376449862883959,
+    245.00158015848302
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000001,
+    19.32334376624191,
+    333.0
+   ],
+   "saturated": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    18.936961487438726,
+    333.3
+   ],
+   "saturated": [
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 100,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000001,
+    100.95134192403553,
+    332.99999999999994
+   ],
+   "saturated": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 100,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    99.11643174586949,
+    333.3
+   ],
+   "saturated": [
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 120,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.0,
+    209.60992434690746,
+    333.0
+   ],
+   "saturated": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 120,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    205.94582357117704,
+    333.30000000000007
+   ],
+   "saturated": [
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 140,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000001,
+    314.0,
+    332.99999999999994
+   ],
+   "saturated": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 140,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    313.3,
+    333.3
+   ],
+   "saturated": [
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 160,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000001,
+    314.0,
+    332.99999999999994
+   ],
+   "saturated": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 160,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    313.3,
+    333.3
+   ],
+   "saturated": [
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    747.8435271194899,
+    10.261558201777637,
+    233.04051910363364
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    739.1590985201885,
+    10.092854755396571
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 25,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    8.941118238121016,
+    217.9545837644813
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 40,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    1236.8905045793574,
+    22.492480904660937,
+    543.0339495268145
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 40,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    1203.9487195860218,
+    21.629843329100947
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 40,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    18.062457785109835,
+    487.89119045941703
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    2484.619772129776,
+    67.51564897921247,
+    1608.4042938258697
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    2292.4910929722646,
+    59.9195725904964
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    44.599328075514464,
+    1309.7935293048615
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 75,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    4613.376872340237,
+    180.61750503771847,
+    3802.47896675458
+   ],
+   "saturated": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 75,
+   "names": [
+    "vanillin",
+    "curcumin"
+   ],
+   "loads": null,
+   "mg": [
+    3789.9664333147603,
+    134.30105516413497
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 75,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": null,
+   "mg": [
+    87.72395463202264,
+    2638.7899647091185
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 25,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000003,
+    9.11096830749261,
+    219.95129173302408
+   ],
+   "saturated": [
+    false,
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 25,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    8.941118238121016,
+    217.9545837644813
+   ],
+   "saturated": [
+    true,
+    true
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000003,
+    42.59154754537695,
+    332.99999999999994
+   ],
+   "saturated": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    41.85290608611854,
+    333.3
+   ],
+   "saturated": [
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 100,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000003,
+    193.2034026099319,
+    333.0
+   ],
+   "saturated": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 100,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    190.05969275979967,
+    333.29999999999995
+   ],
+   "saturated": [
+    true,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 120,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000004,
+    314.00000000000006,
+    333.00000000000006
+   ],
+   "saturated": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 120,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    313.3,
+    333.3
+   ],
+   "saturated": [
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 140,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000004,
+    314.00000000000006,
+    333.00000000000006
+   ],
+   "saturated": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 140,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    313.3,
+    333.3
+   ],
+   "saturated": [
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 160,
+   "names": [
+    "vanillin",
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    100.0,
+    314.0,
+    333.0
+   ],
+   "mg": [
+    100.00000000000004,
+    314.00000000000006,
+    333.00000000000006
+   ],
+   "saturated": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "oil": "coconut",
+   "T_C": 160,
+   "names": [
+    "curcumin",
+    "piperine"
+   ],
+   "loads": [
+    313.3,
+    333.3
+   ],
+   "mg": [
+    313.3,
+    333.3
+   ],
+   "saturated": [
+    false,
+    false
+   ]
+  }
+ ],
+ "single": [
+  {
+   "compound": "vanillin",
+   "oil": "sunflower",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 62.965024122458914,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "sunflower",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 208.84679793105627,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "sunflower",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 480.0420400005051,
+   "saturated": true,
+   "saturation_T_C": 107.7420647008566,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "sunflower",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 533.2809797993924,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "sunflower",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": 623.3714749852813,
+   "saturated": true,
+   "saturation_T_C": null,
+   "saturation_T_kind": "above_range"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "sunflower",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 0.49773448365849193,
+   "saturated": true,
+   "saturation_T_C": 134.61674326859406,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "sunflower",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 2.776160911746262,
+   "saturated": true,
+   "saturation_T_C": 132.78247525082534,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "sunflower",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 14.543825880344041,
+   "saturated": true,
+   "saturation_T_C": null,
+   "saturation_T_kind": "above_range"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "sunflower",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 30.230774792680315,
+   "saturated": true,
+   "saturation_T_C": 132.78247525082534,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "sunflower",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": 83.00414363648899,
+   "saturated": true,
+   "saturation_T_C": null,
+   "saturation_T_kind": "above_range"
+  },
+  {
+   "compound": "piperine",
+   "oil": "sunflower",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 36.74336987074127,
+   "saturated": true,
+   "saturation_T_C": 30.713879265277356,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "sunflower",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 212.08472647569673,
+   "saturated": false,
+   "saturation_T_C": 29.55116250074546,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "sunflower",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 1305.6343097353579,
+   "saturated": false,
+   "saturation_T_C": 78.95040522032104,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "sunflower",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 4101.22632729537,
+   "saturated": false,
+   "saturation_T_C": 29.55116250074546,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "sunflower",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": null,
+   "saturated": false,
+   "saturation_T_C": 94.32381369616954,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "coconut",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 110.784197560191,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "coconut",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 342.2216945158597,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "coconut",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 757.0823196827762,
+   "saturated": false,
+   "saturation_T_C": 71.54591674062371,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "coconut",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 808.929328785845,
+   "saturated": false,
+   "saturation_T_C": null,
+   "saturation_T_kind": "below_range"
+  },
+  {
+   "compound": "vanillin",
+   "oil": "coconut",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": 901.6485538236313,
+   "saturated": true,
+   "saturation_T_C": 177.20686704504953,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "coconut",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 1.3213943267896608,
+   "saturated": true,
+   "saturation_T_C": 117.05956892895063,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "coconut",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 6.14046688193643,
+   "saturated": true,
+   "saturation_T_C": 115.20670855014933,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "coconut",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 27.904020139871655,
+   "saturated": true,
+   "saturation_T_C": null,
+   "saturation_T_kind": "above_range"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "coconut",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 55.12205818916442,
+   "saturated": false,
+   "saturation_T_C": 115.20670855014933,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "curcumin",
+   "oil": "coconut",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": 143.7117645965482,
+   "saturated": true,
+   "saturation_T_C": null,
+   "saturation_T_kind": "above_range"
+  },
+  {
+   "compound": "piperine",
+   "oil": "coconut",
+   "T_C": 25.0,
+   "oil_g": 15.0,
+   "added_mg": 50.0,
+   "capacity_mg": 32.67765628156577,
+   "saturated": true,
+   "saturation_T_C": 32.76817756481095,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "coconut",
+   "T_C": 60.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 196.00835111654294,
+   "saturated": false,
+   "saturation_T_C": 31.616707215937318,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "coconut",
+   "T_C": 100.0,
+   "oil_g": 15.0,
+   "added_mg": 500.0,
+   "capacity_mg": 1278.0052073053948,
+   "saturated": false,
+   "saturation_T_C": 80.18666760290708,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "coconut",
+   "T_C": 120.0,
+   "oil_g": 15.0,
+   "added_mg": 47.0,
+   "capacity_mg": 4462.49180961249,
+   "saturated": false,
+   "saturation_T_C": 31.616707215937318,
+   "saturation_T_kind": "root"
+  },
+  {
+   "compound": "piperine",
+   "oil": "coconut",
+   "T_C": 150.0,
+   "oil_g": 15.0,
+   "added_mg": 1000.0,
+   "capacity_mg": null,
+   "saturated": false,
+   "saturation_T_C": 95.01529824039767,
+   "saturation_T_kind": "root"
+  }
+ ],
+ "mixture_saturation": [
+  {
+   "oil": "coconut",
+   "T_C": 60,
+   "added_mg": {
+    "curcumin": 47.0,
+    "piperine": 50.0
+   },
+   "rows": [
+    {
+     "compound": "curcumin",
+     "dissolved_mg": 6.277949741405539,
+     "saturated": true
+    },
+    {
+     "compound": "piperine",
+     "dissolved_mg": 50.0,
+     "saturated": false
+    }
+   ],
+   "all_dissolved_T_C": 114.57208916544914,
+   "kind": "root"
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 60,
+   "added_mg": {
+    "curcumin": 47.1,
+    "piperine": 50.0,
+    "vanillin": 15.0
+   },
+   "rows": [
+    {
+     "compound": "vanillin",
+     "dissolved_mg": 15.0,
+     "saturated": false
+    },
+    {
+     "compound": "curcumin",
+     "dissolved_mg": 2.8985672677124836,
+     "saturated": true
+    },
+    {
+     "compound": "piperine",
+     "dissolved_mg": 50.0,
+     "saturated": false
+    }
+   ],
+   "all_dissolved_T_C": 131.70011028647423,
+   "kind": "root"
+  },
+  {
+   "oil": "sunflower",
+   "T_C": 100,
+   "added_mg": {
+    "curcumin": 47.1,
+    "piperine": 50.0,
+    "vanillin": 15.0
+   },
+   "rows": [
+    {
+     "compound": "vanillin",
+     "dissolved_mg": 15.0,
+     "saturated": false
+    },
+    {
+     "compound": "curcumin",
+     "dissolved_mg": 15.143031149453577,
+     "saturated": true
+    },
+    {
+     "compound": "piperine",
+     "dissolved_mg": 50.0,
+     "saturated": false
+    }
+   ],
+   "all_dissolved_T_C": 131.70011028647423,
+   "kind": "root"
+  },
+  {
+   "oil": "coconut",
+   "T_C": 140,
+   "added_mg": {
+    "curcumin": 47.1,
+    "piperine": 50.0,
+    "vanillin": 15.0
+   },
+   "rows": [
+    {
+     "compound": "vanillin",
+     "dissolved_mg": 15.0,
+     "saturated": false
+    },
+    {
+     "compound": "curcumin",
+     "dissolved_mg": 47.1,
+     "saturated": false
+    },
+    {
+     "compound": "piperine",
+     "dissolved_mg": 50.0,
+     "saturated": false
+    }
+   ],
+   "all_dissolved_T_C": 114.1545258462429,
+   "kind": "root"
+  }
+ ]
+}

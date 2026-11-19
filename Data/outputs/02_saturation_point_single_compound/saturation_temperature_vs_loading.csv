@@ -1,0 +1,43 @@
+compound,oil,loading_mg_per_100g_oil,loading_mg_in_15g_oil,saturation_temperature_C,note
+vanillin,sunflower,10,1.5,,fully dissolved at all T >= 25 C
+vanillin,sunflower,30,4.5,,fully dissolved at all T >= 25 C
+vanillin,sunflower,100,15.0,,fully dissolved at all T >= 25 C
+vanillin,sunflower,300,45.0,,fully dissolved at all T >= 25 C
+vanillin,sunflower,1000,150.0,50.0873,"saturated below this T, fully dissolved above"
+vanillin,sunflower,3000,450.0,87.6819,"saturated below this T, fully dissolved above"
+vanillin,sunflower,10000,1500.0,,still saturated at 200 C
+vanillin,coconut,10,1.5,,fully dissolved at all T >= 25 C
+vanillin,coconut,30,4.5,,fully dissolved at all T >= 25 C
+vanillin,coconut,100,15.0,,fully dissolved at all T >= 25 C
+vanillin,coconut,300,45.0,,fully dissolved at all T >= 25 C
+vanillin,coconut,1000,150.0,34.2928,"saturated below this T, fully dissolved above"
+vanillin,coconut,3000,450.0,68.3858,"saturated below this T, fully dissolved above"
+vanillin,coconut,10000,1500.0,,still saturated at 200 C
+curcumin,sunflower,10,1.5,46.787,"saturated below this T, fully dissolved above"
+curcumin,sunflower,30,4.5,70.9606,"saturated below this T, fully dissolved above"
+curcumin,sunflower,100,15.0,100.814,"saturated below this T, fully dissolved above"
+curcumin,sunflower,300,45.0,131.499,"saturated below this T, fully dissolved above"
+curcumin,sunflower,1000,150.0,168.602,"saturated below this T, fully dissolved above"
+curcumin,sunflower,3000,450.0,,still saturated at 200 C
+curcumin,sunflower,10000,1500.0,,still saturated at 200 C
+curcumin,coconut,10,1.5,27.7077,"saturated below this T, fully dissolved above"
+curcumin,coconut,30,4.5,52.5056,"saturated below this T, fully dissolved above"
+curcumin,coconut,100,15.0,82.8644,"saturated below this T, fully dissolved above"
+curcumin,coconut,300,45.0,113.911,"saturated below this T, fully dissolved above"
+curcumin,coconut,1000,150.0,151.375,"saturated below this T, fully dissolved above"
+curcumin,coconut,3000,450.0,,still saturated at 200 C
+curcumin,coconut,10000,1500.0,,still saturated at 200 C
+piperine,sunflower,10,1.5,,fully dissolved at all T >= 25 C
+piperine,sunflower,30,4.5,,fully dissolved at all T >= 25 C
+piperine,sunflower,100,15.0,,fully dissolved at all T >= 25 C
+piperine,sunflower,300,45.0,28.7386,"saturated below this T, fully dissolved above"
+piperine,sunflower,1000,150.0,52.6224,"saturated below this T, fully dissolved above"
+piperine,sunflower,3000,450.0,76.5915,"saturated below this T, fully dissolved above"
+piperine,sunflower,10000,1500.0,102.853,"saturated below this T, fully dissolved above"
+piperine,coconut,10,1.5,,fully dissolved at all T >= 25 C
+piperine,coconut,30,4.5,,fully dissolved at all T >= 25 C
+piperine,coconut,100,15.0,,fully dissolved at all T >= 25 C
+piperine,coconut,300,45.0,30.8118,"saturated below this T, fully dissolved above"
+piperine,coconut,1000,150.0,54.4107,"saturated below this T, fully dissolved above"
+piperine,coconut,3000,450.0,77.8932,"saturated below this T, fully dissolved above"
+piperine,coconut,10000,1500.0,103.126,"saturated below this T, fully dissolved above"

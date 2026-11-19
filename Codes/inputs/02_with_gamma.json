@@ -1,7 +1,0 @@
-{
-  "solute": "curcumin",
-  "oil": "sunflower",
-  "T_C": [25, 60, 100],
-  "gamma": 40.0,
-  "note": "optional gamma supplied -> UNIFAC step skipped (route R1)"
-}

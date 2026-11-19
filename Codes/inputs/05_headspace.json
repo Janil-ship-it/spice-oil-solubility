@@ -1,7 +1,0 @@
-{
-  "solute": "vanillin",
-  "oil": "coconut",
-  "T_C": [60],
-  "headspace": {"P_Pa": 12.0, "T_C": 25.0, "note": "synthetic example - no real headspace data for these compounds"},
-  "note": "route R4 - headspace pressure (demo only)"
-}

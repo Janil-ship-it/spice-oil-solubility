@@ -1,0 +1,307 @@
+{
+  "unifac_benchmark": {
+    "system": "n-hexane / 2-butanone, 333.15 K, x1 = 0.5",
+    "gamma_calc": [
+      1.4276025835624175,
+      1.364654501010422
+    ],
+    "gamma_ref": [
+      1.4276025835,
+      1.364654501
+    ],
+    "max_abs_error": 6.2417626622846e-11
+  },
+  "pure_solvent_validation": {
+    "overall": {
+      "n": 78,
+      "AARD_unifac": 73.32398184072663,
+      "AARD_ideal": 60.04562710871101
+    },
+    "aprotic": {
+      "n": 42,
+      "AARD_unifac": 45.803127996080036,
+      "AARD_ideal": 64.9938507866285
+    },
+    "alcohols": {
+      "n": 36,
+      "AARD_unifac": 105.43164465948094,
+      "AARD_ideal": 54.272699484473954
+    }
+  },
+  "vanillin_water": [
+    {
+      "T": 298.15,
+      "x_exp": 0.001182628652305535,
+      "x_calc": 0.24436744511656738,
+      "status": "SLE",
+      "x_ideal": 0.23476291518443318
+    },
+    {
+      "T": 348.15,
+      "x_exp": 0.005885302750884919,
+      "x_calc": 0.016228705866723443,
+      "status": "LLE-limited",
+      "x_ideal": 0.8594571711613024
+    }
+  ],
+  "flavordb_check": [
+    {
+      "compound": "vanillin",
+      "M_library": 152.15,
+      "M_flavordb": 152.149,
+      "logKow_unifac": 1.35,
+      "xlogp_flavordb": 1.2,
+      "difference": 0.15,
+      "source": "FlavorDB2 entity 245 (Vanilla)"
+    },
+    {
+      "compound": "thymol",
+      "M_library": 150.22,
+      "M_flavordb": 150.221,
+      "logKow_unifac": 3.75,
+      "xlogp_flavordb": 3.3,
+      "difference": 0.45,
+      "source": "FlavorDB2 entity 381 (Carom Seed / ajwain)"
+    },
+    {
+      "compound": "piperine",
+      "M_library": 285.34,
+      "M_flavordb": 285.343,
+      "logKow_unifac": 5.79,
+      "xlogp_flavordb": 3.5,
+      "difference": 2.29,
+      "source": "FlavorDB2 entity 339 (Pepper, Piper)"
+    }
+  ],
+  "log_kow_vanillin": {
+    "calc": 1.351157971067801,
+    "exp": 1.23,
+    "source": "OECD SIDS vanillin (measured, 22 C)"
+  },
+  "oil_validation_metrics": {
+    "n": 6,
+    "MAE": 0.9240802253289381,
+    "RMSE": 1.5210092426455317,
+    "AARD_percent": 58.87607511206859,
+    "mean_abs_log10": 0.3328498492978169,
+    "rmse_log10": 0.3756258349073602,
+    "bias_log10": -0.18354033408492584,
+    "typical_factor": 2.152037571878478,
+    "within_factor_2_percent": 50.0
+  },
+  "oil_validation": {
+    "n_equilibrium_points": 6,
+    "mean_abs_log10_dev": 0.3328498492978169,
+    "max_factor": 3.963557925632194,
+    "AARD_unifac": 58.87607511206859,
+    "AARD_ideal": 1904.4907110739327
+  },
+  "lab_validation": "no lab file found (data/lab_measurements.csv)",
+  "mixture_matrix_max_ratio": {
+    "sunflower | vanillin + curcumin | vanillin": 1.0022229570489118,
+    "sunflower | vanillin + curcumin | curcumin": 1.3149773783732537,
+    "sunflower | vanillin + piperine | vanillin": 1.0857368739209956,
+    "sunflower | vanillin + piperine | piperine": 1.1418281026866526,
+    "sunflower | curcumin + piperine | curcumin": 1.1007553791500364,
+    "sunflower | curcumin + piperine | piperine": 1.0011095560839702,
+    "sunflower | vanillin + curcumin + piperine | vanillin": 1.0885139680593454,
+    "sunflower | vanillin + curcumin + piperine | curcumin": 1.4843991414980209,
+    "sunflower | vanillin + curcumin + piperine | piperine": 1.1437385191938199,
+    "coconut | vanillin + curcumin | vanillin": 1.0048271908428161,
+    "coconut | vanillin + curcumin | curcumin": 1.4637219060678437,
+    "coconut | vanillin + piperine | vanillin": 1.0830128615879662,
+    "coconut | vanillin + piperine | piperine": 1.2258415330360624,
+    "coconut | curcumin + piperine | curcumin": 1.0894772889349862,
+    "coconut | curcumin + piperine | piperine": 1.0023502992426705,
+    "coconut | vanillin + curcumin + piperine | vanillin": 1.0890395664328478,
+    "coconut | vanillin + curcumin + piperine | curcumin": 1.6492796951114175,
+    "coconut | vanillin + curcumin + piperine | piperine": 1.2308692088860609
+  },
+  "recipe": {
+    "loadings_mg_per_100g": {
+      "vanillin": 100.0,
+      "curcumin": 313.99999999999994,
+      "piperine": 333.3333333333333
+    },
+    "curcumin_full_extraction_T_C": {
+      "sunflower": 135.0,
+      "coconut": 115.0
+    },
+    "curcumin_extracted_pct": {
+      "sunflower": {
+        "25": 1.0997585847854852,
+        "60": 6.154070632085954,
+        "100": 32.150809234508664
+      },
+      "coconut": {
+        "25": 2.901582263532679,
+        "60": 13.564483930231496,
+        "100": 61.531051904031244
+      }
+    }
+  },
+  "sensitivity_60C_sunflower": {
+    "vanillin": {
+      "base_mg_per_100g": 1392.3119862070419,
+      "dHfus -10%": 6.081910450000969,
+      "dHfus +10%": -5.680366639835377,
+      "Tm -5 K": 13.74067174139061,
+      "Tm +5 K": -11.5418214275519,
+      "dCp = dHfus/Tm": 1.8746753732181531,
+      "a_mn -10%": 19.592808554234928,
+      "a_mn +10%": -12.685918354942073,
+      "high-oleic sunflower": -11.208205076638153
+    },
+    "curcumin": {
+      "base_mg_per_100g": 18.507739411641747,
+      "dHfus -10%": 43.747039922478805,
+      "dHfus +10%": -30.4084794559409,
+      "Tm -5 K": 11.522581009455392,
+      "Tm +5 K": -10.116902112679057,
+      "dCp = dHfus/Tm": 71.59629845050918,
+      "a_mn -10%": 21.039599041025003,
+      "a_mn +10%": -11.811800725992502,
+      "high-oleic sunflower": -18.51777677576177,
+      "keto-enol groups": -63.04285362226483
+    },
+    "piperine": {
+      "base_mg_per_100g": 1413.8981765046449,
+      "dHfus -10%": 30.599258701735916,
+      "dHfus +10%": -23.125726383201066,
+      "Tm -5 K": 16.362324381590394,
+      "Tm +5 K": -13.637514694278712,
+      "dCp = dHfus/Tm": 29.08922166687989,
+      "a_mn -10%": 7.690777574743273,
+      "a_mn +10%": -6.073742756833226,
+      "high-oleic sunflower": -16.972453937917997
+    }
+  },
+  "solver_stats": {
+    "brent_curcumin_sunflower_100C": {
+      "iterations": 5,
+      "calls": 6
+    },
+    "brent_vanillin_sunflower_25C": {
+      "iterations": 5,
+      "calls": 6
+    },
+    "newton_mix_sunflower_60C": 3,
+    "newton_mix_coconut_60C": 3
+  },
+  "route_validation": {
+    "temperature_extrapolation": {
+      "anchored UNIFAC (R2)": {
+        "n": 69,
+        "AARD": 27.703232071481874,
+        "mean_abs_ln": 0.38369064183295704
+      },
+      "regular solution, no groups": {
+        "n": 69,
+        "AARD": 19.897196991413274,
+        "mean_abs_ln": 0.209874391023739
+      },
+      "constant gamma": {
+        "n": 69,
+        "AARD": 24.05983964457302,
+        "mean_abs_ln": 0.2586524287164041
+      },
+      "pure UNIFAC (R5)": {
+        "n": 69,
+        "AARD": 65.3706660288352,
+        "mean_abs_ln": 0.4438783692074394
+      }
+    },
+    "solvent_transfer": {
+      "anchored transfer (R3)": {
+        "n": 336,
+        "AARD": 47.56967229620973,
+        "mean_abs_ln": 0.40511841351478967
+      },
+      "pure UNIFAC (R5)": {
+        "n": 336,
+        "AARD": 73.95892589088785,
+        "mean_abs_ln": 0.47866722203207585
+      }
+    }
+  },
+  "uncertainty_check": [
+    {
+      "solute": "curcumin",
+      "oil": "sunflower",
+      "T_C": 60.0,
+      "mg": 18.507739411641747,
+      "delta_lo": 2.522700871969962,
+      "delta_hi": 135.78162275805317,
+      "mc_lo": 2.6064807868289717,
+      "mc_hi": 137.46153585743937,
+      "share": {
+        "T": 0.0019724683332906978,
+        "Tm": 0.00044960843506705616,
+        "dHfus": 0.03178153170198122,
+        "dCp": 0.07032381602552513,
+        "ln_gamma_model": 0.8954725755041358
+      }
+    },
+    {
+      "solute": "piperine",
+      "oil": "coconut",
+      "T_C": 60.0,
+      "mg": 1306.722340776953,
+      "delta_lo": 180.6829688136278,
+      "delta_hi": 9450.38310526593,
+      "mc_lo": 183.69767999816247,
+      "mc_hi": 14774.970313695605,
+      "share": {
+        "T": 0.002078107954825314,
+        "Tm": 0.0008312782813408648,
+        "dHfus": 0.016406687279733732,
+        "dCp": 0.015019988714005714,
+        "ln_gamma_model": 0.9656639377700944
+      }
+    },
+    {
+      "solute": "vanillin",
+      "oil": "sunflower",
+      "T_C": 40.0,
+      "mg": 710.2265801257953,
+      "delta_lo": 98.22563853577462,
+      "delta_hi": 5135.337399038317,
+      "mc_lo": 104.95366320437891,
+      "mc_hi": 2371.7582923872724,
+      "share": {
+        "T": 0.0010662023782433778,
+        "Tm": 0.0004926408352254461,
+        "dHfus": 0.0027869606334364133,
+        "dCp": 0.0010555331153701015,
+        "ln_gamma_model": 0.9945986630377246
+      }
+    }
+  ],
+  "curcumin_corn_100C": {
+    "R5": {
+      "mg_per_100g": 96.08759498048207,
+      "ci95": [
+        13.991104017779646,
+        659.9068877910029
+      ]
+    },
+    "R2": {
+      "mg_per_100g": 225.12038218136934,
+      "ci95": [
+        91.69587578388273,
+        552.6877412996322
+      ]
+    },
+    "published_mg_per_100g": [
+      326.44178454842216,
+      435.25571273122955
+    ],
+    "R2_regular": 311.5944932489457,
+    "R2_constant": 155.9002138652226
+  },
+  "saturation_tadka_curcumin_T_C": {
+    "sunflower": 132.78247525082534,
+    "coconut": 115.20670855014933
+  },
+  "runtime_s": 471.23777174949646
+}

@@ -1,0 +1,11 @@
+solute,oil,T,exp_mg_mL,pred_mg_mL,ratio,kind,source,note,ideal_mg_mL,status
+piperine,MCT,310.15,3.93,6.575535796970199,1.6731643249288037,oil,"Kusumorini et al. J. Appl. Pharm. Sci. 2022, 12(9), 43",Miglyol 812N; +/-0.37 mg/mL,16.051291024467144,SLE
+curcumin,MCT,298.15,0.25,0.41911186738237566,1.6764474695295026,oil,"Joung et al. 2016, compiled by Araiza-Calahorra et al. Trends Food Sci. Technol. 2018, 71, 155",ambient,3.85892780435591,SLE
+curcumin,coconut,298.15,0.1,0.08139789053024311,0.8139789053024311,oil,"Joung et al. 2016, compiled by Araiza-Calahorra et al. 2018",ambient,2.8778628434720237,SLE
+curcumin,olive,298.15,0.08,0.02535629732209198,0.3169537165261498,oil,"Joung et al. 2016, compiled by Araiza-Calahorra et al. 2018",ambient,2.1485312355290125,SLE
+curcumin,corn,298.15,0.07,0.030367126655980084,0.43381609508542973,oil,"Joung et al. 2016, compiled by Araiza-Calahorra et al. 2018",ambient,2.1667567668252588,SLE
+curcumin,corn,373.15,3.5,0.8830449978706303,0.2522985708201801,oil,"Zou et al. 2015, compiled by Araiza-Calahorra et al. 2018","3 mg/mL fully dissolved, 4 mg/mL not (heat-driven)",49.56173775025692,SLE
+curcumin,MCT,373.15,6.0,6.4862158545224196,1.0810359757537367,oil-lower-bound,"Abbas et al. 2014, compiled by Araiza-Calahorra et al. 2018",at least 6 mg/mL dissolved,88.26794532959518,SLE
+curcumin,MCT,298.15,12.4,0.41911186738237566,0.03379934414373997,oil-high-cluster,"Ma et al. 2017, compiled by Araiza-Calahorra et al. 2018","ambient, method differs",3.85892780435591,SLE
+curcumin,sunflower,298.15,5.4,0.030494532698810275,0.005647135684964865,oil-high-cluster,"Ma et al. 2017, compiled by Araiza-Calahorra et al. 2018","ambient, method differs",2.1577936094970003,SLE
+curcumin,corn,298.15,6.2,0.030367126655980084,0.004897923654190336,oil-high-cluster,"Ma et al. 2017, compiled by Araiza-Calahorra et al. 2018","ambient, method differs",2.1667567668252588,SLE

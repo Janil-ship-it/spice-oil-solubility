@@ -1,0 +1,4 @@
+compound,formula,M_g_per_mol,Tm_K,Tm_C,dHfus_J_per_mol,dCp_J_per_mol_K,unifac_groups,source
+vanillin,C8H8O3,152.15,355.1,81.95,22400.0,0.0,ACH x3; AC x2; ACOH x1; CHO x1; CH3O x1,"Tm: NIST WebBook average of 7 values (355.1 +/- 0.9 K); dHfus: Temprado, Roux & Chickos, J. Therm. Anal. Calorim. 2008, 94, 257."
+curcumin,C21H20O6,368.38,456.0,182.85,37190.0,0.0,ACH x6; AC x4; ACOH x2; CH3O x2; CH=CH x2; CH2CO x1; C=O* x1,"Tm: 183 C (form I), PubChem; dHfus: Ranjbar et al., CrystEngComm 2024, 26, 1077 (value used for pure curcumin)."
+piperine,C17H19NO3,285.34,406.05,132.9,38612.2,0.0,ACH x3; AC x3; CH2O x1; O* x1; CH=CH x2; HCON(CH2)2 x1; CH2 x3,"Tm 132.90 C and dHfus 135.32 J/g by DSC: Fitriani, Simbolon & Zaini, J. Sains Farm. Klin. 2023, 10, 353."

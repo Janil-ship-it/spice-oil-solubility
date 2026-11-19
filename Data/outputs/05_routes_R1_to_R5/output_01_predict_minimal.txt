@@ -1,0 +1,23 @@
+python -m flavorsol predict inputs/01_predict_minimal.json
+
+Assumptions:
+  - identity: PubChem CID 969516; FlavorDB status absent_from_flavordb; flavour earthy, slightly bitter, colour (yellow) [general descriptor (not in FlavorDB2)]
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - route R5: pure UNIFAC prediction
+T = 25.0 C | route R5 | SLE | 3.318 mg/100 g (95 % range 0.369-29.9)
+    uncertainty comes from: ln_gamma_model 73%, dCp 21%, dHfus 5%, T 0%, Tm 0%
+    d ln x/dT = 0.0533 1/K; dH_sol = 39.4 kJ/mol; hE = 2.21 kJ/mol (Gibbs-Helmholtz)
+T = 60.0 C | route R5 | SLE | 18.51 mg/100 g (95 % range 2.52-136)
+    uncertainty comes from: ln_gamma_model 90%, dCp 7%, dHfus 3%, T 0%, Tm 0%
+    d ln x/dT = 0.0452 1/K; dH_sol = 41.7 kJ/mol; hE = 4.39 kJ/mol (Gibbs-Helmholtz)
+T = 100.0 C | route R5 | SLE | 96.96 mg/100 g (95 % range 14.1-666)
+    uncertainty comes from: ln_gamma_model 97%, dHfus 1%, dCp 1%, T 0%, Tm 0%
+    d ln x/dT = 0.0379 1/K; dH_sol = 43.9 kJ/mol; hE = 6.25 kJ/mol (Gibbs-Helmholtz)
+T = 140.0 C | route R5 | SLE | 399 mg/100 g (95 % range 56.1-2.84e+03)
+    uncertainty comes from: ln_gamma_model 99%, dHfus 0%, T 0%, dCp 0%, Tm 0%
+    d ln x/dT = 0.0328 1/K; dH_sol = 46.6 kJ/mol; hE = 7.62 kJ/mol (Gibbs-Helmholtz)
+T = 160.0 C | route R5 | SLE | 762.2 mg/100 g (95 % range 101-5.76e+03)
+    uncertainty comes from: ln_gamma_model 100%, T 0%, dHfus 0%, Tm 0%, dCp 0%
+    d ln x/dT = 0.0312 1/K; dH_sol = 48.6 kJ/mol; hE = 8.11 kJ/mol (Gibbs-Helmholtz)
+    [INFO] UNIFAC_EXTRAPOLATION: T = 160 C is outside the 2-152 C window where most UNIFAC parameters were fitted; treat predictions as extrapolations.
+    [WARNING] THERMAL_STABILITY: curcumin degrades in hot oil: 38.9 % loss was measured in corn oil heated up to 200 C (Siddiqui, Pak. J. Pharm. Sci. 2015, 28, 299). Dissolved amount will fall with time; prediction is an upper bound.

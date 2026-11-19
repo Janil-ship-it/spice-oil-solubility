@@ -1,0 +1,7 @@
+compound,oil,min_gamma_at_saturation_SLE,x_below_ideal_everywhere,solubility_increases_with_T,ln_gamma_pure_solute_limit
+vanillin,sunflower,7.01805,True,True,-1.04083e-16
+vanillin,coconut,5.85875,True,True,-6.73073e-16
+curcumin,sunflower,28.0854,True,True,1.29063e-15
+curcumin,coconut,21.926,True,True,3.34455e-15
+piperine,sunflower,1.00699,True,True,-3.08916e-16
+piperine,coconut,1.00338,True,True,-1.3331e-15
