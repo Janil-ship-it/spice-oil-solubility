@@ -1,0 +1,7 @@
+{
+  "_comment": "Deliberately wrong inputs to show the boundary checks: dHfus typed in kJ/mol and a temperature beyond the allowed range.",
+  "solute": "vanillin",
+  "oil": "sunflower",
+  "T_C": [60, 350],
+  "dHfus": 22.4
+}

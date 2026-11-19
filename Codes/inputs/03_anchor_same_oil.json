@@ -1,0 +1,11 @@
+{
+  "_comment": "Route R2: one measured solubility in the same oil at 25 C (curcumin in corn oil, 0.07 mg/mL; Joung et al. 2016 as compiled by Araiza-Calahorra et al. 2018) is used to predict hotter oil. Literature value at 100 C: 3-4 mg/mL.",
+  "solute": "curcumin",
+  "oil": "corn",
+  "T_C": [25, 60, 100],
+  "measurements": [
+    {"value": 0.07, "unit": "mg/mL", "T_C": 25, "sigma_rel": 0.10,
+     "source": "Joung et al. 2016 via Araiza-Calahorra et al. 2018"}
+  ],
+  "monte_carlo": 500
+}

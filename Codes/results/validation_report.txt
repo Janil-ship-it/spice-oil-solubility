@@ -1,0 +1,20 @@
+UNIFAC benchmark max error: 6.2e-11
+ethyl vanillin    in ethanol         AARD UNIFAC   88.5 %   ideal   34.5 %
+ethyl vanillin    in 1-propanol      AARD UNIFAC  110.1 %   ideal   62.8 %
+ethyl vanillin    in 2-propanol      AARD UNIFAC  157.1 %   ideal   95.0 %
+ethyl vanillin    in acetone         AARD UNIFAC    5.3 %   ideal   32.1 %
+ethyl vanillin    in methyl acetate  AARD UNIFAC   46.8 %   ideal    9.5 %
+ethyl vanillin    in ethyl acetate   AARD UNIFAC   39.3 %   ideal    6.9 %
+vanillyl alcohol  in ethanol         AARD UNIFAC   39.8 %   ideal    5.0 %
+vanillyl alcohol  in ethyl acetate   AARD UNIFAC  130.4 %   ideal  120.8 %
+vanillyl alcohol  in butyl acetate   AARD UNIFAC   37.9 %   ideal  253.4 %
+piperine  MCT          37 C  published   3.93  predicted   6.576 mg/mL  (oil)
+curcumin  MCT          25 C  published   0.25  predicted   0.419 mg/mL  (oil)
+curcumin  coconut      25 C  published   0.10  predicted   0.081 mg/mL  (oil)
+curcumin  olive        25 C  published   0.08  predicted   0.025 mg/mL  (oil)
+curcumin  corn         25 C  published   0.07  predicted   0.030 mg/mL  (oil)
+curcumin  corn        100 C  published   3.50  predicted   0.883 mg/mL  (oil)
+curcumin  MCT         100 C  published   6.00  predicted   6.486 mg/mL  (oil-lower-bound)
+curcumin  MCT          25 C  published  12.40  predicted   0.419 mg/mL  (oil-high-cluster)
+curcumin  sunflower    25 C  published   5.40  predicted   0.030 mg/mL  (oil-high-cluster)
+curcumin  corn         25 C  published   6.20  predicted   0.030 mg/mL  (oil-high-cluster)

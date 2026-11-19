@@ -1,0 +1,5 @@
+compound,spicerx_mesh_id,spices_in_spicerx,note
+curcumin,D003474,Turmeric; Zedoary; Curry Leaf,"SpiceRx identity; formula in SpiceRx may be inconsistent, use only for spice mapping"
+piperine,D010880,Black Pepper; Long Pepper,"SpiceRx formula C20H16O6 contradicts InChI; use only for spice mapping"
+thymol,D013940,Ajowan; Thyme; Oregano; Basil; Savory; Marjoram; Peppermint; Spearmint; Clove; Cinnamon; Nutmeg; Ginger; Black Pepper,"SpiceRx formula inconsistent; use only for spice mapping"
+vanillin,,,"Not listed in SpiceRx"

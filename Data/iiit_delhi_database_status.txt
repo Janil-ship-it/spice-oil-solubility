@@ -1,0 +1,12 @@
+vanillin  CID 1183    retrieved     flavour: vanilla, chocolate, sweet, creamy  [FlavorDB2 entity 245 (Vanilla)]
+          FEMA 3107; CAS 121-33-5; M 152.149; XLogP 1.2; odour: sweetish smell@pleasant aromatic vanilla odor
+          in spices - SpiceRx: not listed; FlavorDB2: Vanilla, Dill, Fenugreek, Pepper, Turmeric, Carom Seed
+curcumin  CID 969516  absent_from_flavordb flavour: earthy, slightly bitter, colour (yellow)  [general descriptor (not in FlavorDB2)]
+          in spices - SpiceRx: Turmeric, Zedoary, Curry Leaf; FlavorDB2: not listed
+piperine  CID 638024  retrieved     flavour: pepper, animal, spice  [FlavorDB2 entity 339 (Pepper, Piper)]
+          FEMA 2909; CAS 7780-20-3; 94-62-2; M 285.343; XLogP 3.5; odour: -
+          in spices - SpiceRx: Black Pepper, Long Pepper; FlavorDB2: Dill, Pepper
+thymol    CID 6989    retrieved     flavour: herbal, thyme, camphor, medicinal, phenolic, spice, wood  [FlavorDB2 entity 381 (Carom Seed / ajwain)]
+          FEMA 3066; CAS 89-83-8; M 150.221; XLogP 3.3; odour: odor of thyme@a spicy-herbal, slightly medicinal odor reminiscent of thyme@aromatic odor
+          in spices - SpiceRx: Ajowan, Thyme, Oregano, Basil, Savory, Marjoram, Peppermint, Spearmint, Clove, Cinnamon, Nutmeg, Ginger, Black Pepper; FlavorDB2: Dill, Fenugreek, Pepper, Carom Seed
+Refresh from a machine with internet access: python tools/fetch_flavordb.py

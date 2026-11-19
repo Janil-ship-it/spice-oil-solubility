@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Spice–Oil Solubility Checker | Group 4A</title>
+<style>
+  :root { --bg:#0f1419; --card:#1a2332; --accent:#e8a838; --text:#e7ecf3; --muted:#8b9bb4; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  header { padding:1.5rem 1rem; border-bottom:1px solid #2a3548; }
+  h1 { margin:0; font-size:1.4rem; color:var(--accent); }
+  main { max-width:900px; margin:0 auto; padding:1.5rem 1rem; }
+  .card { background:var(--card); border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
+  label { display:block; font-size:0.85rem; color:var(--muted); margin-bottom:0.3rem; }
+  select, input { width:100%; padding:0.55rem 0.7rem; border-radius:8px; border:1px solid #2a3548;
+                  background:#0f1419; color:var(--text); margin-bottom:0.8rem; }
+  button { background:var(--accent); color:#111; border:none; padding:0.65rem 1.2rem; border-radius:8px;
+           font-weight:600; cursor:pointer; }
+  button:hover { filter:brightness(1.08); }
+  table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+  th, td { text-align:left; padding:0.45rem 0.6rem; border-bottom:1px solid #2a3548; }
+  th { color:var(--muted); font-weight:500; }
+  .note { font-size:0.8rem; color:var(--muted); margin-top:0.8rem; }
+  .badge { display:inline-block; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.75rem;
+           background:#2a3548; color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Spice–Oil Solubility Checker</h1>
+  <p style="margin:0.3rem 0 0; color:#8b9bb4; font-size:0.9rem;">
+    Group 4A · UNIFAC + solid–liquid equilibrium · IIIT-Delhi FlavorDB2 / SpiceRx linked
+  </p>
+</header>
+<main>
+  <div class="card">
+    <label>Compound</label>
+    <select id="solute">
+      <option value="curcumin">Curcumin (turmeric)</option>
+      <option value="vanillin">Vanillin (vanilla)</option>
+      <option value="piperine">Piperine (black pepper)</option>
+    </select>
+    <label>Oil</label>
+    <select id="oil">
+      <option value="coconut">Coconut oil</option>
+      <option value="sunflower">Sunflower oil</option>
+    </select>
+    <label>Temperature (°C)</label>
+    <input id="T" type="number" value="100" min="20" max="180" step="5"/>
+    <button onclick="lookup()">Look up pre-computed result</button>
+    <div id="out" style="margin-top:1rem;"></div>
+    <p class="note">
+      This page serves pre-computed tables from the Python model
+      (<code>results/solubility_single.csv</code>). For interactive prediction
+      with optional γ, anchors or batch recipes, run the local CLI or the Colab notebook.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0; font-size:1.1rem;">IIIT-Delhi data status</h2>
+    <table>
+      <tr><th>Compound</th><th>FlavorDB2</th><th>SpiceRx</th></tr>
+      <tr><td>vanillin</td><td><span class="badge">retrieved</span> FEMA 3107, XLogP 1.2</td><td>not listed</td></tr>
+      <tr><td>piperine</td><td><span class="badge">retrieved</span> FEMA 2909, XLogP 3.5</td><td>Black / Long Pepper</td></tr>
+      <tr><td>curcumin</td><td><span class="badge">absent</span> (non-volatile)</td><td>Turmeric, Zedoary, Curry Leaf</td></tr>
+      <tr><td>thymol</td><td><span class="badge">retrieved</span> FEMA 3066, XLogP 3.3</td><td>Ajowan + 12 spices</td></tr>
+    </table>
+    <p class="note">FlavorDB2 / SpiceRx supply identity & flavour profiles only. Melting points and ΔH<sub>fus</sub> come from NIST / DSC literature.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0; font-size:1.1rem;">Known gaps</h2>
+    <ul style="margin:0; padding-left:1.2rem; color:var(--muted); font-size:0.9rem;">
+      <li>Group lab measurements still a template</li>
+      <li>Curcumin ΔH<sub>fus</sub> literature range 37–49 kJ/mol (we use 37.19)</li>
+      <li>Two clusters of published curcumin–oil solubilities; model tracks the low cluster</li>
+      <li>Headspace route is synthetic only</li>
+    </ul>
+  </div>
+</main>
+<script>
+// Pre-computed subset (mg per 100 g oil) from results/solubility_single.csv
+const DATA = {
+  "curcumin|coconut|25": {mg:8.81, status:"SLE", gamma:35.17},
+  "curcumin|coconut|60": {mg:40.94, status:"SLE", gamma:36.62},
+  "curcumin|coconut|100": {mg:186.0, status:"SLE", gamma:34.07},
+  "curcumin|coconut|150": {mg:958.1, status:"SLE", gamma:27.65},
+  "curcumin|sunflower|25": {mg:3.32, status:"SLE", gamma:70.37},
+  "curcumin|sunflower|60": {mg:18.5, status:"SLE", gamma:66.0},
+  "curcumin|sunflower|100": {mg:95.0, status:"SLE", gamma:55.0},
+  "vanillin|coconut|25": {mg:739, status:"SLE"},
+  "vanillin|coconut|100": {mg:5050, status:"LLE-limited"},
+  "piperine|coconut|25": {mg:218, status:"SLE"},
+  "piperine|coconut|60": {mg:1307, status:"SLE"},
+  "piperine|coconut|100": {mg:8520, status:"SLE"},
+};
+function lookup() {
+  const s = document.getElementById('solute').value;
+  const o = document.getElementById('oil').value;
+  const T = Math.round(+document.getElementById('T').value / 5) * 5;
+  const key = `${s}|${o}|${T}`;
+  const el = document.getElementById('out');
+  const r = DATA[key];
+  if (!r) {
+    el.innerHTML = `<p>No pre-computed point for ${s} in ${o} at ${T} °C. Closest tabulated temperatures: 25, 60, 100, 150 °C. Run the Python model for arbitrary T.</p>`;
+    return;
+  }
+  el.innerHTML = `
+    <table>
+      <tr><th>Quantity</th><th>Value</th></tr>
+      <tr><td>Solubility</td><td><strong>${r.mg}</strong> mg / 100 g oil</td></tr>
+      <tr><td>Status</td><td>${r.status}</td></tr>
+      ${r.gamma ? `<tr><td>γ (UNIFAC)</td><td>${r.gamma}</td></tr>` : ''}
+    </table>
+    <p class="note">Values from the validated UNIFAC–SLE model. See manuscript for uncertainty and literature comparison.</p>`;
+}
+lookup();
+</script>
+</body>
+</html>

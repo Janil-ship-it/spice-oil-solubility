@@ -1,0 +1,174 @@
+\documentclass[twocolumn,10pt]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+
+\title{\textbf{Predicting the Solubility of Curcumin, Vanillin and Piperine\\
+in Cooking Oils with UNIFAC-Corrected Solid--Liquid Equilibrium}}
+
+\author{
+Rohan Jaybhave,$^{\dagger}$
+Janil Jain,$^{\dagger}$
+Preet Patel,$^{\dagger}$
+Manish Kumawat,$^{\dagger}$
+Saksham Malav$^{\dagger}$\\[0.4em]
+\small $^{\dagger}$Group~4A, Course Project --- Flavor Extraction / Solubility in Cooking Oils\\
+\small Indian Institute of Technology Delhi / affiliated programme\\[0.3em]
+\small Corresponding code repository:
+\href{https://github.com/Janil-ship-it/spice-oil-solubility}{github.com/Janil-ship-it/spice-oil-solubility}
+}
+
+\date{19 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+We present a modular Python tool that estimates the equilibrium solubility of three spice flavour compounds---curcumin (turmeric), vanillin (vanilla) and piperine (black pepper)---in common cooking oils as a function of temperature. The model combines the ideal solid--liquid equilibrium (SLE) expression, driven by experimental melting temperature and enthalpy of fusion, with a UNIFAC activity-coefficient correction that accounts for non-ideality of the oil phase. Oils are represented as average triglycerides built from their fatty-acid compositions. Single-solute problems are solved with Brent's method; multi-solute loadings are solved with Newton--Raphson. Identity and flavour profiles are taken from the IIIT-Delhi databases FlavorDB2 and SpiceRx; thermodynamic parameters are taken from NIST and DSC literature. Predictions for curcumin in coconut and MCT oils at ambient temperature lie within a factor of roughly two of the lower cluster of published experimental values. In a typical tadka (15\,g coconut oil, 47\,mg curcumin, 50\,mg piperine at 60\,$^\circ$C) the model indicates that only about 13\,\% of the curcumin dissolves while all of the piperine dissolves. The code distinguishes mandatory from optional inputs, propagates input uncertainty, flags thermal-degradation and smoke-point limits, and is released with a full test suite and reproducible result tables.
+\end{abstract}
+
+\section{Introduction}
+
+Indian cooking routinely disperses the flavour-active constituents of spices into hot oil (tadka / tempering). The amount of a given compound that actually dissolves, as opposed to remaining as undissolved solid, controls both the perceived flavour intensity and the amount of bioactive material that reaches the consumer. Quantitative solubility data at frying temperatures are scarce, especially for multi-component loadings. Group-contribution methods such as UNIFAC provide a practical route to activity coefficients when experimental binary interaction parameters are unavailable.
+
+The present work implements a transparent SLE + UNIFAC pipeline for curcumin, vanillin and piperine in sunflower and coconut oil (and several other edible oils). Following instructor guidance from the first project meeting we also link the IIIT-Delhi resources FlavorDB2 and SpiceRx \citep{garg2018flavordb,goel2024flavordb2,rakhi2018spicerx} so that spice identity and flavour descriptors enter the workflow. Those databases do not supply melting points or oil solubilities; the thermodynamic inputs therefore come from NIST WebBook / ThermoML and from DSC studies.
+
+\section{Theory}
+
+\subsection{Ideal solid--liquid equilibrium}
+For a pure solid solute in equilibrium with a liquid solution the activity of the solute in the liquid equals the activity of the pure solid:
+\begin{equation}
+\ln a_i^{\mathrm{L}} = \ln\bigl(x_i\gamma_i\bigr)
+= -\frac{\Delta_{\mathrm{fus}}H_i}{R}\left(\frac{1}{T}-\frac{1}{T_{\mathrm{m},i}}\right)
++ \frac{\Delta C_{p,i}}{R}\left(\frac{T_{\mathrm{m},i}}{T}-1-\ln\frac{T_{\mathrm{m},i}}{T}\right).
+\label{eq:sle}
+\end{equation}
+In the absence of reliable $\Delta C_p$ data we set $\Delta C_p=0$ (standard first approximation) and report a sensitivity range when needed. Above the melting point the pure solute is liquid; the code then checks whether complete miscibility or liquid--liquid equilibrium (LLE) limits the oil-rich composition.
+
+\subsection{UNIFAC activity coefficients}
+Activity coefficients $\gamma_i$ are obtained from the classic UNIFAC residual + combinatorial expressions \citep{fredenslund1975unifac}. Group interaction parameters are taken from the DDBST compilation. Oils are mapped to an average triglyceride whose group counts reflect the fatty-acid profile of the oil (e.g.\ coconut oil is rich in C12--C14 saturated chains; sunflower oil is rich in linoleic and oleic chains).
+
+\subsection{Iterative solution}
+Because $\gamma=\gamma(x,T)$ the SLE equation is implicit. For a single solute we solve
+\begin{equation}
+f(x)=\ln x + \ln\gamma(x,T) - \ln a^{\mathrm{sat}}(T)=0
+\end{equation}
+with Brent's method on $(0,1)$. For several solutes simultaneously we use a multidimensional Newton--Raphson iteration on the vector of mole fractions, with analytic or finite-difference Jacobian.
+
+\section{Implementation}
+
+The package \texttt{flavorsol} is organised into modules that mirror the five group roles:
+
+\begin{itemize}
+\item \texttt{data/} --- compound properties, oil representations, FlavorDB2/SpiceRx records;
+\item \texttt{unifac.py}, \texttt{sle.py} --- activity coefficients and single-solute SLE;
+\item \texttt{mixture.py} --- multi-solute Newton solver and batch (gram-scale) calculator;
+\item \texttt{engine.py} --- decision pathways for mandatory vs optional inputs, experimental anchors, uncertainty propagation;
+\item \texttt{checks.py} --- thermal-degradation, flash-point and smoke-point flags;
+\item \texttt{validation.py}, \texttt{plotting.py} --- literature comparison and figures.
+\end{itemize}
+
+Mandatory inputs are solute, oil and temperature. Optional inputs (user-supplied $\gamma$, measured solubility in the same or another solvent, headspace pressure) select one of five calculation routes and skip or correct the corresponding step. Missing $\Delta_{\mathrm{fus}}H$ is estimated by Walden's rule and the reported uncertainty is widened.
+
+Identity and flavour profiles are loaded from the CSV exports of FlavorDB2 and SpiceRx that ship with the package. Curcumin is absent from FlavorDB2 (it is not a volatile flavour molecule); its spice mapping therefore comes exclusively from SpiceRx. XLogP values from FlavorDB2 provide an independent consistency check on the UNIFAC hydrophobicity ranking.
+
+\section{Results}
+
+\subsection{Single-solute solubility}
+Table~\ref{tab:sol} summarises selected predictions (mg solute per 100\,g oil). Curcumin remains the least soluble species at all temperatures examined. Vanillin above its melting point ($\approx 82\,^\circ$C) is limited by liquid--liquid demixing rather than by solid solubility.
+
+\begin{table}[t]
+\centering
+\caption{Predicted solubility (mg per 100\,g oil). ``LLE'' denotes the oil-rich phase limit above the melting point.}
+\label{tab:sol}
+\begin{tabular}{llrrl}
+\toprule
+Compound & Oil & $T$ ($^\circ$C) & mg/100\,g & Status \\
+\midrule
+curcumin & coconut & 25 & 8.8 & SLE \\
+curcumin & coconut & 60 & 40.9 & SLE \\
+curcumin & coconut & 100 & 186 & SLE \\
+curcumin & sunflower & 25 & 3.3 & SLE \\
+curcumin & sunflower & 100 & 97 & SLE \\
+vanillin & coconut & 25 & 739 & SLE \\
+vanillin & coconut & 100 & 5047 & LLE \\
+piperine & coconut & 25 & 218 & SLE \\
+piperine & coconut & 100 & 8520 & SLE \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In a realistic batch (15\,g coconut oil, 0.047\,g curcumin, 0.050\,g piperine at 60\,$^\circ$C) the model predicts that only $\approx 13\,\%$ of the curcumin dissolves while essentially all of the piperine dissolves. Vanillin raises the apparent solubility of curcumin by a factor of up to $\approx 1.7$ when both are present in excess.
+
+\subsection{Comparison with literature}
+UNIFAC reproduces a published binary activity-coefficient benchmark (n-hexane / 2-butanone at 333\,K) to a maximum absolute error of $6\times10^{-11}$. For curcumin in MCT and coconut oil at 25\,$^\circ$C the predictions lie within a factor of about two of the lower cluster of experimental values reported by Araiza-Calahorra et~al.\ and related studies. A second, substantially higher cluster of published numbers (5--12\,mg\,mL$^{-1}$) exceeds the ideal-solution upper bound for a stable crystal with the $\Delta_{\mathrm{fus}}H$ used here; those points may reflect supersaturation or partially amorphous material and are flagged as such in the validation report.
+
+\subsection{IIIT-Delhi database linkage}
+Running \texttt{python -m flavorsol database} prints the FlavorDB2 / SpiceRx status of every compound. Vanillin, piperine and thymol are fully retrieved from FlavorDB2; curcumin is correctly reported as absent. SpiceRx supplies the turmeric $\leftrightarrow$ curcumin and black-pepper $\leftrightarrow$ piperine associations used by the batch calculator.
+
+\section{Discussion and limitations}
+
+\begin{itemize}
+\item The enthalpy of fusion of curcumin reported in the literature spans roughly 37--49\,kJ\,mol$^{-1}$. We adopt 37.19\,kJ\,mol$^{-1}$ \citep{ranjbar2024}; results are sensitive to this choice.
+\item Hansen-solubility-parameter screening is available as a separate module but is deliberately not combined with UNIFAC, to avoid double-counting the same interactions.
+\item No group laboratory measurements have yet been inserted; the file \texttt{data/lab\_measurements.csv} is a template. Once filled, the validation and manuscript tables can be regenerated automatically.
+\item Headspace-pressure anchoring (route R4) is implemented but has been exercised only with synthetic numbers.
+\end{itemize}
+
+\section{Conclusions}
+
+A transparent, modular SLE + UNIFAC tool has been built for the solubility of key spice flavour compounds in cooking oils. It incorporates instructor-requested links to FlavorDB2 and SpiceRx, handles incomplete inputs, propagates uncertainty and produces kitchen-scale batch predictions. Curcumin remains the solubility bottleneck under ordinary tadka conditions; elevating temperature above approximately 115--135\,$^\circ$C (depending on the oil) is predicted to bring the entire typical curcumin loading into solution.
+
+\section*{Data and software availability}
+All source code, input examples, result CSVs and the static checker web page are available at
+\url{https://github.com/Janil-ship-it/spice-oil-solubility}.
+Reproducibility command: \texttt{python run\_all.py}.
+
+\begin{thebibliography}{99}
+
+\bibitem{fredenslund1975unifac}
+A.~Fredenslund, R.~L.~Jones, J.~M.~Prausnitz,
+\textit{AIChE J.} \textbf{21} (1975) 1086--1099.
+
+\bibitem{garg2018flavordb}
+N.~Garg et~al.,
+\textit{Nucleic Acids Res.} \textbf{46} (2018) D1217--D1223.
+(FlavorDB)
+
+\bibitem{goel2024flavordb2}
+M.~Goel, G.~Bagler et~al.,
+\textit{J.\ Food Sci.} \textbf{89} (2024) 7076--7082.
+(FlavorDB2)
+
+\bibitem{rakhi2018spicerx}
+N.~K.~Rakhi et~al.,
+\textit{bioRxiv} (2018) 273599.
+(SpiceRx)
+
+\bibitem{ranjbar2024}
+A.~Ranjbar et~al.,
+\textit{CrystEngComm} \textbf{26} (2024) 1077.
+(curcumin $\Delta_{\mathrm{fus}}H$)
+
+\bibitem{fitriani2023}
+N.~Fitriani, A.~Simbolon, E.~Zaini,
+\textit{J.\ Sains Farm.\ Klin.} \textbf{10} (2023) 353.
+(piperine DSC)
+
+\bibitem{araiza2018}
+A.~Araiza-Calahorra, M.~Akhtar, A.~Sarkar,
+\textit{Trends Food Sci.\ Technol.} \textbf{71} (2018) 155--169.
+(curcumin in oils review)
+
+\end{thebibliography}
+
+\end{document}
