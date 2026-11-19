@@ -1,0 +1,20 @@
+python -m flavorsol predict inputs/03_anchor_same_oil.json
+
+Assumptions:
+  - identity: PubChem CID 969516; FlavorDB status absent_from_flavordb; flavour earthy, slightly bitter, colour (yellow) [general descriptor (not in FlavorDB2)]
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - route R2: anchored to measured solubility in the same oil
+  - temperature dependence of gamma from UNIFAC (Gibbs-Helmholtz)
+T = 25.0 C | route R2 | SLE | 7.617 mg/100 g (95 % range 6.1-9.51)
+    uncertainty comes from: ln_gamma_model 78%, T 22%, Tm 0%, dHfus 0%, dCp 0%
+    Monte Carlo 95 % range: 6.13-9.54
+    d ln x/dT = 0.0533 1/K; dH_sol = 39.4 kJ/mol; hE = 2.13 kJ/mol (Gibbs-Helmholtz)
+T = 60.0 C | route R2 | SLE | 42.48 mg/100 g (95 % range 24.5-73.5)
+    uncertainty comes from: dCp 77%, ln_gamma_model 13%, dHfus 8%, T 3%, Tm 0%
+    Monte Carlo 95 % range: 24.4-77.8
+    d ln x/dT = 0.0452 1/K; dH_sol = 41.7 kJ/mol; hE = 4.32 kJ/mol (Gibbs-Helmholtz)
+T = 100.0 C | route R2 | SLE | 225.1 mg/100 g (95 % range 91.7-553)
+    uncertainty comes from: dCp 83%, dHfus 11%, ln_gamma_model 5%, T 1%, Tm 0%
+    Monte Carlo 95 % range: 92.5-596
+    d ln x/dT = 0.0384 1/K; dH_sol = 44.4 kJ/mol; hE = 6.16 kJ/mol (Gibbs-Helmholtz)
+    [WARNING] LONG_EXTRAPOLATION: 75 K away from the nearest measurement.

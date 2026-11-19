@@ -1,0 +1,15 @@
+python -m flavorsol predict inputs/08_custom_oil_and_grade.json
+
+Assumptions:
+  - identity: PubChem CID 638024; FlavorDB status retrieved; flavour pepper, animal, spice [FlavorDB2 entity 339 (Pepper, Piper)]
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - oil built from the fatty-acid composition you supplied
+  - route R5: pure UNIFAC prediction
+T = 60.0 C | route R5 | SLE | 1174 mg/100 g (95 % range 167-8.24e+03)
+    uncertainty comes from: ln_gamma_model 97%, dHfus 2%, dCp 2%, T 0%, Tm 0%
+    d ln x/dT = 0.0452 1/K; dH_sol = 41.7 kJ/mol; hE = 2.39 kJ/mol (Gibbs-Helmholtz)
+T = 160.0 C | route R5 | miscible | inf mg/100 g
+    [INFO] UNIFAC_EXTRAPOLATION: T = 160 C is outside the 2-152 C window where most UNIFAC parameters were fitted; treat predictions as extrapolations.
+    [INFO] ABOVE_MELTING: T is above the solute melting point (133 C): no solid can exist; the result is a miscibility (liquid-liquid) limit, not a solubility.
+    [INFO] THERMAL_STABILITY: piperine was stable as a solid at 100 C for 4 days (Kotte et al., Anal. Methods 2014); stability above 100 C in oil is not verified.
+    [WARNING] SMOKE_POINT: T is at/above the smoke point of unrefined sunflower oil (~107 C): the oil oxidises and decomposes, so its composition (the solvent) changes.

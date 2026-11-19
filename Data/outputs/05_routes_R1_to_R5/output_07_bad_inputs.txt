@@ -1,0 +1,3 @@
+python -m flavorsol predict inputs/07_bad_inputs.json
+
+[ERROR] DHFUS_UNITS: dHfus = 22.4 looks like kJ/mol; the program expects J/mol.

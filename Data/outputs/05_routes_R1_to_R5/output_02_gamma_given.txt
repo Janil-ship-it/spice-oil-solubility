@@ -1,0 +1,17 @@
+python -m flavorsol predict inputs/02_gamma_given.json
+
+Assumptions:
+  - identity: PubChem CID 638024; FlavorDB status retrieved; flavour pepper, animal, spice [FlavorDB2 entity 339 (Pepper, Piper)]
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - route R1: activity coefficient supplied: UNIFAC skipped
+  - temperature dependence of gamma from UNIFAC (Gibbs-Helmholtz)
+T = 40.0 C | route R1 | SLE | 494.6 mg/100 g (95 % range 271-903)
+    uncertainty comes from: dCp 47%, dHfus 31%, T 11%, ln_gamma_model 11%, Tm 1%
+    d ln x/dT = 0.0510 1/K; dH_sol = 41.6 kJ/mol; hE = 2.40 kJ/mol (Gibbs-Helmholtz)
+T = 60.0 C | route R1 | SLE | 1301 mg/100 g (95 % range 844-2.01e+03)
+    uncertainty comes from: dHfus 32%, dCp 29%, ln_gamma_model 21%, T 16%, Tm 2%
+    d ln x/dT = 0.0460 1/K; dH_sol = 42.5 kJ/mol; hE = 2.48 kJ/mol (Gibbs-Helmholtz)
+T = 100.0 C | route R1 | SLE | 7324 mg/100 g (95 % range 5.59e+03-9.59e+03)
+    uncertainty comes from: ln_gamma_model 53%, T 27%, dHfus 13%, Tm 4%, dCp 2%
+    d ln x/dT = 0.0411 1/K; dH_sol = 47.6 kJ/mol; hE = 2.23 kJ/mol (Gibbs-Helmholtz)
+    [INFO] THERMAL_STABILITY: piperine was stable as a solid at 100 C for 4 days (Kotte et al., Anal. Methods 2014); stability above 100 C in oil is not verified.

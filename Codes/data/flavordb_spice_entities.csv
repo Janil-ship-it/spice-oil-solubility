@@ -1,8 +1,0 @@
-entity_id,name,category,scientific_name,n_molecules,target_compounds
-245,Vanilla,Fruit Essence,Vanilla,174,vanillin
-256,Dill,Herb,Apiaceae,200,piperine; thymol; vanillin
-258,Fenugreek,Herb,Trigonella Foenum-Graecum,123,thymol; vanillin
-339,Pepper,Spice,Piper,223,piperine; thymol; vanillin
-341,Turmeric,Spice,Curcuma,130,vanillin
-381,Carom Seed,Spice,Ajwain,155,thymol; vanillin
-399,White Pepper,Spice,Piper,18,

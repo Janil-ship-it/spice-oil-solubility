@@ -1,0 +1,13 @@
+python -m flavorsol predict inputs/06_new_compound_fallback.json
+
+Assumptions:
+  - identity: PubChem CID 6989; FlavorDB status retrieved; flavour herbal, thyme, camphor, medicinal, phenolic, spice, wood [FlavorDB2 entity 381 (Carom Seed / ajwain)]
+  - dHfus not given: Walden's rule dSfus = 56.5 J/(mol K) -> dHfus = 18.2 kJ/mol (+/-25 %)
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - route R5: pure UNIFAC prediction
+T = 30.0 C | route R5 | SLE | 1.254e+05 mg/100 g (95 % range 6.69e+04-2.35e+05)
+    uncertainty comes from: ln_gamma_model 99%, dHfus 1%, T 0%, Tm 0%, dCp 0%
+    d ln x/dT = 0.0075 1/K; dH_sol = 5.7 kJ/mol; hE = -0.95 kJ/mol (Gibbs-Helmholtz)
+T = 45.0 C | route R5 | SLE | 4.269e+05 mg/100 g (95 % range 2e+05-9.12e+05)
+    uncertainty comes from: ln_gamma_model 100%, dHfus 0%, T 0%, Tm 0%, dCp 0%
+    d ln x/dT = 0.0087 1/K; dH_sol = 7.3 kJ/mol; hE = -0.17 kJ/mol (Gibbs-Helmholtz)

@@ -1,0 +1,15 @@
+python -m flavorsol predict inputs/04_anchor_other_solvent.json
+
+Assumptions:
+  - dCp = 0 (usual first approximation; its effect is in the uncertainty)
+  - route R3: measured in another solvent, transferred to the oil with UNIFAC
+  - solvent transfer assumes the measured-vs-UNIFAC error (delta) of the solute is the same in the oil
+T = 25.0 C | route R3 | SLE | 511.5 mg/100 g (95 % range 182-1.43e+03)
+    uncertainty comes from: ln_gamma_model 100%, T 0%, Tm 0%, dHfus 0%, dCp 0%
+    d ln x/dT = 0.0354 1/K; dH_sol = 26.2 kJ/mol; hE = 1.83 kJ/mol (Gibbs-Helmholtz)
+T = 40.0 C | route R3 | SLE | 870.7 mg/100 g (95 % range 306-2.48e+03)
+    uncertainty comes from: ln_gamma_model 99%, T 0%, dCp 0%, dHfus 0%, Tm 0%
+    d ln x/dT = 0.0331 1/K; dH_sol = 27.0 kJ/mol; hE = 2.26 kJ/mol (Gibbs-Helmholtz)
+T = 60.0 C | route R3 | SLE | 1713 mg/100 g (95 % range 579-5.07e+03)
+    uncertainty comes from: ln_gamma_model 98%, dCp 1%, dHfus 1%, T 0%, Tm 0%
+    d ln x/dT = 0.0305 1/K; dH_sol = 28.2 kJ/mol; hE = 2.66 kJ/mol (Gibbs-Helmholtz)

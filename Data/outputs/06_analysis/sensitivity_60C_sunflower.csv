@@ -1,0 +1,26 @@
+compound,oil,T_C,base_mg_per_100g,perturbation,change_percent
+vanillin,sunflower,60,1392.31,dHfus -10%,6.08191
+vanillin,sunflower,60,1392.31,dHfus +10%,-5.68037
+vanillin,sunflower,60,1392.31,Tm -5 K,13.7407
+vanillin,sunflower,60,1392.31,Tm +5 K,-11.5418
+vanillin,sunflower,60,1392.31,dCp = dHfus/Tm,1.87468
+vanillin,sunflower,60,1392.31,a_mn -10%,19.5928
+vanillin,sunflower,60,1392.31,a_mn +10%,-12.6859
+vanillin,sunflower,60,1392.31,high-oleic sunflower,-11.2082
+curcumin,sunflower,60,18.5077,dHfus -10%,43.747
+curcumin,sunflower,60,18.5077,dHfus +10%,-30.4085
+curcumin,sunflower,60,18.5077,Tm -5 K,11.5226
+curcumin,sunflower,60,18.5077,Tm +5 K,-10.1169
+curcumin,sunflower,60,18.5077,dCp = dHfus/Tm,71.5963
+curcumin,sunflower,60,18.5077,a_mn -10%,21.0396
+curcumin,sunflower,60,18.5077,a_mn +10%,-11.8118
+curcumin,sunflower,60,18.5077,high-oleic sunflower,-18.5178
+curcumin,sunflower,60,18.5077,keto-enol groups,-63.0429
+piperine,sunflower,60,1413.9,dHfus -10%,30.5993
+piperine,sunflower,60,1413.9,dHfus +10%,-23.1257
+piperine,sunflower,60,1413.9,Tm -5 K,16.3623
+piperine,sunflower,60,1413.9,Tm +5 K,-13.6375
+piperine,sunflower,60,1413.9,dCp = dHfus/Tm,29.0892
+piperine,sunflower,60,1413.9,a_mn -10%,7.69078
+piperine,sunflower,60,1413.9,a_mn +10%,-6.07374
+piperine,sunflower,60,1413.9,high-oleic sunflower,-16.9725

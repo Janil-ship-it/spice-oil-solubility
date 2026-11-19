@@ -1,0 +1,6 @@
+oil,used_for,pseudo_triglyceride_M_g_per_mol,density_20C_g_per_mL,C6:0_wt_pct,C8:0_wt_pct,C10:0_wt_pct,C12:0_wt_pct,C14:0_wt_pct,C16:0_wt_pct,C16:1_wt_pct,C18:0_wt_pct,C18:1_wt_pct,C18:2_wt_pct,C18:3_wt_pct,unifac_groups
+sunflower,main study,876.259,0.919,0.0,0.0,0.0,0.0,0.0,6.5,0.0,4.0,25.0,64.5,0.0,CH2 x37.3802; CH x1.0000; CH2COO x3.0000; CH3 x3.0000; CH=CH x4.5974
+coconut,main study,660.585,0.924,0.5,7.0,6.0,48.0,18.0,9.0,0.0,3.0,6.5,2.0,0.0,CH2 x30.1079; CH x1.0000; CH2COO x3.0000; CH3 x3.0000; CH=CH x0.2321
+corn,literature validation only,872.635,0.919,0.0,0.0,0.0,0.0,0.0,11.0,0.0,2.0,28.0,58.0,1.0,CH2 x37.5454; CH x1.0000; CH2COO x3.0000; CH3 x3.0000; CH=CH x4.3693
+olive,literature validation only,873.334,0.912,0.0,0.0,0.0,0.0,0.0,12.5,1.0,2.5,73.0,10.0,1.0,CH2 x40.3655; CH x1.0000; CH2COO x3.0000; CH3 x3.0000; CH=CH x2.8772
+MCT,literature validation only,503.839,0.945,0.0,57.0,42.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,CH2 x19.3644; CH x1.0000; CH2COO x3.0000; CH3 x3.0000

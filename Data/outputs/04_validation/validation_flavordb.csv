@@ -1,0 +1,4 @@
+compound,M_library,M_flavordb,logKow_unifac,xlogp_flavordb,difference,source
+vanillin,152.15,152.149,1.35,1.2,0.15,FlavorDB2 entity 245 (Vanilla)
+thymol,150.22,150.221,3.75,3.3,0.45,FlavorDB2 entity 381 (Carom Seed / ajwain)
+piperine,285.34,285.343,5.79,3.5,2.29,"FlavorDB2 entity 339 (Pepper, Piper)"
